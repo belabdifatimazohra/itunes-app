@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
-
+import Home from "./Components/Home";
+import Songs from "./Components/Songs";
+import SongCart from "./Components/SongCart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Routes>
+        {/* Home page */}
+        <Route path="/" element={<Home />} />
+        {/* Songs page */}
+        <Route path="/songs/:search" element={<Songs />} />
+        {/* Songs cart */}
+        <Route path="/songs/myCart" element={<SongCart />} />
+      </Routes>
     </div>
   );
 }
