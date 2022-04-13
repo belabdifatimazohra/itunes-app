@@ -51,6 +51,10 @@ input:focus {
   font-weight: bold;
   margin: 2%;
 }
+.btnRed{
+  background: #FA1E0E;
+  border: #FA1E0E;
+}
 .btnAdd:hover {
   background: #D62AD0;
 }

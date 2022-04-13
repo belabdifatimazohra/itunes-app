@@ -38,11 +38,10 @@ function Songs() {
               </Card.Body>
 
               <Button
-                className="btnAdd"
+                className= {addedSongs.findIndex(x => x.id === s.trackId) === -1 ? "btnAdd" : "btnRed"}
                 onClick={(e) => setAddedSongs(prevState => [...prevState, {id: s.trackId, track: s.trackName, artist: s.artistName}])}
               >
                 {/* Add to cart */}
-                {/* {JSON.stringify(addedSongs).includes(JSON.stringify({id: s.trackId, track: s.trackName, artist: s.artistName})) ? "Remove" : "Add"} */}
                 {addedSongs.findIndex(x => x.id === s.trackId) === -1 ? "Add" : "Remove"}
               </Button>
             </Card>
