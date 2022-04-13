@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Song() {
+function Song(songsAdded) {
     return (
         <div>
             

@@ -55,6 +55,10 @@ input:focus {
   background: #FA1E0E;
   border: #FA1E0E;
 }
+.btnRed:hover{
+  background: #FA1E0E;
+  border: #FA1E0E;
+}
 .btnAdd:hover {
   background: #D62AD0;
 }
