@@ -23,8 +23,8 @@ function Songs() {
             setAddedSongs(addedSongs.filter(el => el.id !== song.id)) :
 
             setAddedSongs(prevState => [...prevState, song])
-
-        console.log(addedSongs);
+        localStorage.setItem("addedSongs", JSON.stringify(addedSongs));
+       
     }
     // Load All searched songs
     useEffect(() => {
