@@ -7,7 +7,7 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 function Songs() {
   const { search } = useParams();
   const [songs, setSongsList] = useState();
-  const [addedSongs, setAddedSongs] = useState("");
+  const [addedSongs, setAddedSongs] = useState([]);
   // Get the songs list with axios
   const getSongs = async () => {
     const response = await axios.get(
