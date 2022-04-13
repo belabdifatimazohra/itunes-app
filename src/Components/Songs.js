@@ -39,7 +39,7 @@ function Songs() {
 
               <Button
                 className="btnAdd"
-                onClick={(e) => setAddedSongs({id: s.trackId, track: s.trackName, artist: s.artistName})}
+                onClick={(e) => setAddedSongs(prevState => [...prevState, {id: s.trackId, track: s.trackName, artist: s.artistName}])}
               >
                 {/* Add to cart */}
                 {/* {JSON.stringify(addedSongs).includes(JSON.stringify({id: s.trackId, track: s.trackName, artist: s.artistName})) ? "Remove" : "Add"} */}
